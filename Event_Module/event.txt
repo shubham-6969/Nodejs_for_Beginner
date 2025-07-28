@@ -1,0 +1,27 @@
+#  Event Emitters in Event Module
+
+
+
+** EventEmitter is a core module in NOde.js used to create and handle custom events, it is part of the events module and is often used for building event-driven systems in Node.js **
+
+* key Methods 
+
+* emit(eventName,[args])
+Emits (triggers) an event.
+All listeners for that event will be called.
+
+* on(eventName, listener)
+Adds a listener for the specified event.
+Can add multiple listeners to the same event.
+
+* off(eventName, listener) or removeListener
+Removes aspecific listener
+
+* removeAllListeners(eventName)
+Remove all listeners for a given event
+
+*listenerCount(eventName)
+Retunrs the number of listeners for a specific event 
+
+listeners(eventName)
+Return an array of listeners attached to specific event 

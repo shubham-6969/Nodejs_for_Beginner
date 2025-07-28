@@ -1,0 +1,90 @@
+Here's a clear explanation of **Node.js History** and its **Prerequisites**—ideal for learning, interviews, or notes.
+
+---
+
+## 📜 Node.js History
+
+### 🧑‍💻 Creator:
+
+* **Ryan Dahl** created Node.js in **2009**.
+
+### 🎯 Why Node.js was created?
+
+* Traditional web servers (like Apache) were **synchronous** and **multi-threaded**.
+* Ryan wanted a **non-blocking**, **event-driven**, and **lightweight** runtime to handle **high concurrency** efficiently.
+
+### 🛠️ Built on:
+
+* **JavaScript Engine:** Google’s **V8 Engine** (same as in Chrome).
+* **Language Support:** JavaScript (server-side).
+* **C/C++ bindings:** For system-level operations (I/O, networking, etc.).
+
+### 📅 Key Milestones:
+
+* **2009**: First release (v0.1.0).
+* **2010**: NPM (Node Package Manager) launched.
+* **2015**: Node.js merged with io.js (a fork), forming a unified community.
+* **LTS** (Long-Term Support) versions are released regularly.
+
+---
+
+## 📦 Node.js Prerequisites
+
+Before learning or working with Node.js, you should have a basic understanding of the following:
+
+### ✅ 1. **JavaScript (Essential)**
+
+* Variables, functions, loops, conditionals
+* Arrays & Objects
+* Callbacks & Promises
+* ES6+ features (let/const, arrow functions, destructuring)
+
+### ✅ 2. **Asynchronous Programming Concepts**
+
+* Callback functions
+* Promises
+* `async/await`
+* Event loop
+
+### ✅ 3. **Basic Terminal/Command Line Usage**
+
+* Navigating folders
+* Running commands
+* Installing packages (with NPM or Yarn)
+
+### ✅ 4. **Basic Understanding of HTTP & Web Servers**
+
+* GET, POST requests
+* Client-Server architecture
+* REST APIs (optional but helpful)
+
+### ✅ 5. **File System Basics**
+
+* Reading/Writing files
+* Understanding paths (`__dirname`, `__filename`)
+
+---
+
+## 🛠 Optional but Helpful:
+
+| Skill        | Why it's useful                         |
+| ------------ | --------------------------------------- |
+| Git & GitHub | Version control and collaboration       |
+| HTML/CSS     | If building full-stack apps             |
+| MongoDB      | If working with MERN stack              |
+| Express.js   | Most popular web framework with Node.js |
+
+---
+
+## 🎯 Summary
+
+| Topic         | Description                                       |
+| ------------- | ------------------------------------------------- |
+| Launched      | 2009, by Ryan Dahl                                |
+| Built On      | Google V8 JavaScript Engine                       |
+| Goal          | Non-blocking, event-driven server-side JS         |
+| Prerequisites | JavaScript, async concepts, terminal basics, HTTP |
+
+---
+
+Let me know if you want a **one-page PDF summary**, **interview-ready notes**, or want to move to **Express.js basics**.
