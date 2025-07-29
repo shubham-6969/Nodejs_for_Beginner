@@ -1,0 +1,120 @@
+What is Node.js http Module?
+🔹 Definition:
+The http module in Node.js allows your app to create a web server or make HTTP requests (like a browser).
+
+It is a built-in module, so no need to install it. Just require('http') and you’re ready!
+
+💻 Use Cases:
+Create a Server – to handle requests and send responses (like serving HTML or JSON).
+
+Make Requests – you can act like a client, sending requests to other servers (APIs etc).
+
+eg.
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello from Node.js Server!');
+});
+
+server.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
+
+🧠 Breakdown:
+http.createServer() – creates the server
+
+Callback gets req (request) and res (response) objects
+
+res.writeHead() – sets status & headers
+
+res.end() – sends the response
+
+server.listen(3000) – server starts on port 3000
+
+
+🎯 Real Life Analogy:
+Imagine http.createServer() as opening a chai shop. You (the server) wait for a customer (request) and then serve chai (response).
+
+http.get() is like you going to someone else’s shop to get chai 🍵 (data).
+
+
+🔁 Common Methods in http:
+
+| Function              | Purpose                        |
+| --------------------- | ------------------------------ |
+| `http.createServer()` | Creates a server               |
+| `server.listen()`     | Starts the server on a port    |
+| `http.get()`          | Make a GET request to a server |
+| `res.writeHead()`     | Set status & headers           |
+| `res.end()`           | End and send the response      |
+
+
+🌐 What is a Web Server?
+🔹 Simple Definition:
+A web server is a computer program (or machine) that:
+
+Listens for web requests (like when you open a website),
+
+Processes those requests,
+
+And responds with data (like HTML, JSON, images, etc.).
+
+
+🤖 Real World Analogy:
+Imagine a restaurant 🍽️:
+
+You (browser) = customer
+
+Waiter = web server
+
+Kitchen = backend/database
+
+You ask (send a request), waiter listens and brings food (response) from the kitchen. Same thing happens between your browser and a web server!
+
+
+
+📦 Popular Web Servers:
+
+| Software         | Use Case                       |
+| ---------------- | ------------------------------ |
+| Apache           | Traditional websites           |
+| Nginx            | High-performance web traffic   |
+| Node.js (custom) | JavaScript-based applications  |
+| Express.js       | Built on Node.js (easy to use) |
+
+⚡ Key Roles of Web Server:
+Serve static files (HTML, CSS, JS, images)
+
+Process dynamic requests (API calls, database fetch)
+
+Handle form submissions
+
+Manage client-server communication
+
+🧠 Why is it Important?
+Without a web server, websites and APIs won't work — it's the bridge between client (user/browser) and your backend logic or data.
+
+Bhai, agla topic bol — jaise:
+👉 What is Express.js?
+👉 What is an API?
+👉 Static vs dynamic server?
+Main ready hoon tere liye 🔥
+
+
+Most Commonly Used HTTP Status Codes in Development
+
+| Code    | Name                  | 📌 Where Used                                           |
+| ------- | --------------------- | ------------------------------------------------------- |
+| **200** | OK                    | Request successful (GET, POST, PUT etc) – most common   |
+| **201** | Created               | New resource created (after POST, like creating a user) |
+| **204** | No Content            | Request successful but no data to return (like DELETE)  |
+| **400** | Bad Request           | Client sent invalid/malformed data                      |
+| **401** | Unauthorized          | Authentication (JWT/login) needed                       |
+| **403** | Forbidden             | User not allowed to access this                         |
+| **404** | Not Found             | Route or data not found                                 |
+| **409** | Conflict              | Duplicate data (like email already registered)          |
+| **422** | Unprocessable Entity  | Validation error (used with libraries like Zod, Joi)    |
+| **500** | Internal Server Error | Server crashed / unhandled error                        |

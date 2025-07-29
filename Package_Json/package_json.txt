@@ -1,0 +1,119 @@
+🗂️ What is package.json?
+package.json is the heart of any Node.js project.
+It’s a file that stores project information, scripts, and a list of dependencies (packages your project uses).
+
+
+📦 Imagine it like a project resume:
+It tells:
+
+✅ What’s the project name
+
+📄 What’s the version
+
+🛠️ Which tools/libraries it needs
+
+🧪 What scripts to run (npm start, npm test, etc.)
+
+📃 Who the author is, etc.
+
+
+🧾 Example of a package.json file:
+
+{
+  "name": "my-node-server",
+  "version": "1.0.0",
+  "description": "A simple Node.js server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Shubham Patwal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+🔧 How is it created?
+Just run:
+
+bash
+npm init
+
+or fast version:
+
+bash
+npm init -y
+
+That will auto-generate a basic package.json file for you.
+
+
+🧠 Why is it important?
+Helps others understand your project
+
+Makes your app portable — anyone can install dependencies using:
+
+bash
+npm install or npm i 
+
+
+🧠 package.json fields explained:
+
+| Field               | Purpose                                                            |
+| ------------------- | ------------------------------------------------------------------ |
+| `"name"`            | Project ka naam (lowercase, no spaces)                             |
+| `"version"`         | Project version (like app update number — `"1.0.0"`)               |
+| `"description"`     | Short info about what your project does                            |
+| `"main"`            | Entry point file (like `"server.js"` or `"index.js"`)              |
+| `"scripts"`         | Commands you can run with `npm run` (like `npm start`, `npm test`) |
+| `"author"`          | Your name                                                          |
+| `"license"`         | Type of license (common one: `"ISC"` or `"MIT"`)                   |
+| `"dependencies"`    | List of packages required to run the project (like Express, etc.)  |
+| `"devDependencies"` | Packages only needed in development (like Nodemon, ESLint)         |
+
+
+"scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+
+use like: 
+
+npm start      # for production
+npm run dev    # for development
+
+# key Point in pervious topic you see that your where restart server again and again if you do any changes in server file but using nodemon you don't need to restart server again nodemon automatically restarts your Node.js server , wherever you make changes in you Code
+
+Why use Nodemon? 
+
+without Nodemon: 
+# Every time you change code:
+Ctrl + C to stop
+node server.js to restart manually 😩
+
+with Nodemon:
+nodemon server.js
+
+how to install Nodemon? 
+Global install (use anywhere):
+
+npm install - g nodemon 
+
+OR project-level (recommended for teams):
+
+npm install --save-dev nodemon
+
+🏃‍♂️ How to use?
+
+nodemon server.js
+
+Or in package.json
+"scripts": {
+  "dev": "nodemon server.js"
+}
+
+Then run: 
+npm run dev
+
+
+
