@@ -1,0 +1,73 @@
+# What is Es Module 
+
+** 
+An ES module (ECMAScript module) in JavaScript is a standardized way to organize and share code across different files using import and export statements.
+
+It was introduced in ES6 (ECMAScript 2015) to support modular programming, making JavaScript more maintainable and scalable.
+
+**
+
+# Key Features of ES Modules
+
+* export keyword – used to expose functions, variables, or classes from a file (module).
+
+* import keyword – used to bring in functions, variables, or classes from other files.
+
+* Static structure – imports/exports are declared at the top and can't be conditionally loaded.
+
+* Runs in strict mode automatically.
+ 
+# Usage in Node.js
+
+* Use .mjs extension or
+
+* Set "type": "module" in package.json
+
+
+# Example 
+
+Math.js file 
+
+// Named exports
+export const add = (a, b) => a + b;
+export const subtract = (a, b) => a - b;
+
+// Default export
+export default function multiply(a, b) {
+  return a * b;
+}
+
+App.js file 
+
+// Named imports
+import { add, subtract } from './math.js';
+
+// Default import
+import multiply from './math.js';
+
+console.log(add(2, 3));        // 5
+console.log(subtract(5, 2));   // 3
+console.log(multiply(3, 4));   // 12
+
+# Types off Es module
+
+* Name Export 
+You can export multiple variables, functions, or classes from a module.
+You must import them using the same name.
+
+Syntax 
+
+// file: utils.js
+export const greet = () => console.log("Hello");
+export const age = 25;
+
+* Default Export 
+Each module can have only one default export.
+Can be imported with any name.
+
+Syntax 
+
+// file: utils.js
+export default function greet() {
+  console.log("Hello");
+}

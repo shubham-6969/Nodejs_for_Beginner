@@ -1,0 +1,113 @@
+✅ What is NPM in Node.js?
+NPM stands for Node Package Manager.
+It is:
+
+The default package manager for Node.js
+
+A tool to install, update, remove, and manage third-party libraries (called packages or modules)
+
+Also a registry (https://www.npmjs.com/) where developers publish their Node packages
+
+📦 Why is NPM Important?
+When you're building Node.js apps, you often don’t want to write everything from scratch.
+So you use prebuilt packages from NPM, like:
+
+express – for creating web servers
+
+mongoose – for MongoDB integration
+
+nodemon – for auto-restarting the server on file changes
+
+# Installing Packages with NPM
+
+Step 1: Initialize Project -> npm init 
+Creates a package.json file which stores your project info and dependencies
+
+Use -y for quick setup 
+
+npm init -y
+
+Step 2: Install a Package
+npm install express
+
+Install a packages as dev dependency 
+npm install nodemon --save-dev
+
+This will add express in your dependencies and nodemon in devDependencies in package.json.
+
+
+| File/Folders        | Purpose                                                           |
+| ------------------- | ----------------------------------------------------------------- |
+| `package.json`      | Lists the project name, scripts, dependencies, versions           |
+| `node_modules/`     | Folder where all installed packages are stored                    |
+| `package-lock.json` | Keeps track of exact versions installed (for consistent installs) |
+
+Common NPM Commands
+
+| Command                   | Description                                  |
+| ------------------------- | -------------------------------------------- |
+| `npm init`                | Start a new Node.js project                  |
+| `npm install <package>`   | Install a package                            |
+| `npm install`             | Install all dependencies from `package.json` |
+| `npm uninstall <package>` | Remove a package                             |
+| `npm update`              | Update installed packages                    |
+| `npm list`                | List installed packages                      |
+| `npm -v`                  | Show NPM version                             |
+| `npm run <script>`        | Run custom script defined in `package.json`  |
+
+
+
+Very Inportant For Interview Questions 
+
+Versioning in NPM 
+
+"express": "^4.18.2"
+
+**  ^ → Allow minor updates, e.g., 4.x.x (but not 5.x)
+
+**  ~ → Allow only patch updates, e.g., 4.18.x
+
+No symbol → Lock to exact version
+
+Now let's understand these version symbols
+
+Format: major.minor.patch
+➡️ e.g., 4.17.21
+
+4 = Major Version
+
+17 = Minor Version
+
+21 = Patch Version
+
+🔁 Version Symbols in Action:
+
+"lodash": "4.17.21"
+
+Only this exact version will be installed.
+No updates will be allowed automatically
+
+# Caret ^ <---- Symbol
+
+"lodash": "^4.17.21"
+
+It allows:
+All minor and patch updates
+Example: 4.18.0, 4.19.5, etc.  But won’t go to version 5.x.x
+
+# Tilde ~ <--- Symbole 
+
+"lodash": "~4.17.21"
+
+It allows:
+Only patch updates within current minor version
+Example: 4.17.22, 4.17.23, etc.
+won’t go to 4.18.0
+
+# Greater than >
+
+"lodash": ">4.17.21"
+
+Will install any version newer than 4.17.21
+(e.g. 4.18.0, 5.0.0)
+⚠️ Risky for breaking changes.
